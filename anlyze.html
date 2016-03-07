@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<title>	analyze</title>
+<script type="text/javascript">
+	function myfunction(){
+	s = document.getElementById("text").value;
+	document.getElementById("wordcount").value = s.split(' ').length;
+}
+{
+	
+    var str="";
+    str =document.getElementById("f1").value;
+    var n = str.length;
+    document.getElementById("demo").innerHTML = n;
+
+    String.prototype.count = function(match) {
+var res = this.match();
+if (res==null) { return 0; }
+return res.length;
+}
+  }  
+</script>	
+</head>
+<body>
+ <textarea rows="5" cols="90" id="text" cols="50" > </textarea>
+ 
+ <br>
+<button type="button" name="Convert" value="text" onClick="myfunction();"> analyze </button>
+<input id="wordcount" type="text" value="">
+ 
+</body>
+</html>

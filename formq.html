@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+var name=$("#name").val();
+var age=$("#age").val();
+var gender=$("#gender").val();
+var address=$("#address").val();
+var education=$("#education").val();
+var city=$("#city").val();
+
+$("#tryit").click(function(){
+    if($("#name").val() == '')
+    	alert('please enter name.');
+      
+     if($("#age").val() == '')
+    	alert('please enter age.');
+
+    if($("#male").val()==''){
+    	alert('select gender');
+    }
+   if($("#address").val() == '')
+    	alert('please enter address');
+      
+  
+});
+});
+
+
+</script>	
+</head>
+<body>
+<form action="#">
+<table>
+<div>Name:<input type="text" id="name" value=""></div>
+<div>Age: <input type="number" id="age" value=""></div>
+<div>Gender: <input type="radio" id="male" value=""> male </div>
+<div><input type="radio" id="female" value="">female
+</div>
+<div>Address:<textarea rows="4" id="address" value=""> </textarea></div>
+<div>Education:<input type="checkbox" name="education" value="highschool"> HIGHSCHOOL
+<input type="checkbox" name="education" value="DIPLOMA"> DIPLOMA 
+<input type="checkbox" name="education" value="DERGEE"> DERGEE
+<input type="checkbox" name="education" value="POST GRAD"> POST GRAD 
+<input type="checkbox" name="education" value="PHD"> PHD <br></div>
+<div>CITY:<select> <option value="visakhapatnam">visakhapatnam</option>
+ <option value="hyderabad">hyderabad</option>
+ <option value="guntur">guntur</option></div>
+  </select>
+  <div><button type="button">Clear</button> </div>
+  <div><button type="button" id="tryit">submit</button></div>
+
+ </table>
+ </form>
+</body>
+</html>

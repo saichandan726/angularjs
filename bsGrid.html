@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+  
+$(document).ready(function() {
+  $("#form").hide();
+  $("#hide").click(function(){
+  $(".table").hide();
+  $("#form").show();
+});
+
+$("#show").click(function(){
+$(".table").show();
+});
+ $(".delete").click(function (e) {
+  var row = $(this).parent("td").parent('tr');
+  row.remove(); 
+});
+ $(".edit").click(function EditFunction(name, gender, phone, address) { 
+ $("#form").show();
+ $('#name').val(name);
+ $('#gender').val(gender);
+ $('#phone').val(phone);
+ $('#address').val(address);
+});
+
+function Editfunction1(name, gender, phone, address)
+  {
+  $("#row1-name").text($('#name').val());
+  $("#row1-gender").text($('#gender').val());
+  $("#row1-phone").text($('#phone').val());
+  $("#row1-address").text($('#address').val());
+}
+
+});
+
+</script>
+</head>
+<body>
+<button type="text" id="hide">Add data</button>
+<button type="text" id="show">save</button>
+<div class="content">
+             
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+  <td id="row1-name">Akmal</td>
+  <td id="row1-gender">male</td>
+  <td id="row1-phone">9632797080</td>
+  <td id="row1-address">calee</td>
+  <td> 
+  <button type="button" class="edit"><span class="glyphicon glyphicon-pencil"></span></button>
+ <button type="button" class="delete"> <span class="glyphicon glyphicon-trash"></span></button>
+ </td>
+    </tr>
+    <tr>
+  <td>Boyhaki</td>
+  <td>male</td>
+  <td>9578797080</td>
+  <td>kempang</td>
+ <td> <button type=button class="edit"><span class="glyphicon glyphicon-pencil"></span></button>
+ <button type="button" class="delete"> <span class="glyphicon glyphicon-trash"></span></button></td>
+    </tr>
+    <tr>
+  <td>Bhukari</td>
+  <td>female</td>
+  <td>9378797080</td>
+  <td>sigli</td>
+  <td><button type=button class="edit"><span class="glyphicon glyphicon-pencil"></span></button>
+ <button type="button" class="delete"> <span class="glyphicon glyphicon-trash"></span></button></td> </tr>
+    <tr>
+  <td>Ghazali</td>
+  <td>female</td>
+  <td>9372987080</td>
+  <td>calee</td>
+  <td><button type=button class="edit"><span class="glyphicon glyphicon-pencil"></span></button>
+ <button type="button" class="delete"> <span class="glyphicon glyphicon-trash"></span></button> </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div>
+<form id="form">
+ Name:<input type="text" id="name">
+ Gender:<input type="text" id="gender">
+ Phone:<input type="number" id="phone">
+ Address:<input type="address" id="address"> 
+ <button onclick="return Editfunction1('Akmal','male','9632797080','calee')" id=edit1>save</button>
+ </form>
+ </div>
+
+</body>
+</html>

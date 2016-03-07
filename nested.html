@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Nested drop</title>
+<script type="text/javascript">
+function modify(code) 
+{
+document.form1.subcategory1.options.length=0;
+document.form1.subcategory2.options.length=0;
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+switch (code) 
+{
+case "India":
+document.form1.subcategory1.options[0]=new Option("select subcategory1", "");
+document.form1.subcategory1.options[1]=new Option("Andhra Pradesh", "Andhra Pradesh");
+document.form1.subcategory1.options[2]=new Option("Telangana", "Telangana");
+document.form1.subcategory1.options[3]=new Option("Tamilnadu","Tamilnadu");
+break;
+case "Pakistan":
+document.form1.subcategory1.options[0]=new Option("select subcategory1", "");
+document.form1.subcategory1.options[1]=new Option("Balochistan", "Balochistan");
+document.form1.subcategory1.options[2]=new Option("Sindh", "Sindh");
+break;
+case "USA":
+document.form1.subcategory1.options[0]=new Option("select subcategory1", "");
+document.form1.subcategory1.options[1]=new Option("TEXAS", "TEXAS");
+document.form1.subcategory1.options[2]=new Option("MICHIGAN", "MICHIGAN");
+break;
+case "Australia":
+document.form1.subcategory1.options[0]=new Option("select subcategory1", "");
+document.form1.subcategory1.options[1]=new Option("VICTORIA", "VICTORIA");
+document.form1.subcategory1.options[2]=new Option("COCOS", "COCOS");
+break;
+
+
+}
+return true;
+}
+</script>
+
+<script type="text/javascript">
+function modify1(code) 
+{
+document.form1.subcategory2.options.length=0;
+switch (code) 
+{
+case "Andhra Pradesh":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("Visakhapatnam", "Visakhapatnam");
+document.form1.subcategory2.options[2]=new Option("guntur", "guntur");
+document.form1.subcategory2.options[3]=new Option("vizianagaram", "vizianagaram");
+break;
+case "Telangana":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("Hyderabad", "Hyderabad");
+document.form1.subcategory2.options[2]=new Option("Nizamabad", "Nizamabad");
+break;
+case "Tamilnadu":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("gfnfj", "bxzsiauhd");
+document.form1.subcategory2.options[2]=new Option("bcdyusa", "mndskjn");
+break;
+
+case "Balochistan":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("bhjcfb", "bdgfyu");
+document.form1.subcategory2.options[2]=new Option("ghuih", "bssk");
+break;
+case "Sindh":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("dhyu", "hduh");
+document.form1.subcategory2.options[2]=new Option("dnjbdh", "dhhoi");
+break;
+case "TEXAS":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("dbsu", "duish");
+document.form1.subcategory2.options[2]=new Option("shjo", "djhh");
+break;
+case "MICHIGAN":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("jFGDj", "jfsfj");
+document.form1.subcategory2.options[2]=new Option("lggsl", "lfsl");
+break;
+case "VICTORIA":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("wgsw", "wgfsgw");
+document.form1.subcategory2.options[2]=new Option("xgvfsx", "xfsggx");
+break;
+case "COCOS":
+document.form1.subcategory2.options[0]=new Option("select subcategory2", "");
+document.form1.subcategory2.options[1]=new Option("sfss", "sffss");
+document.form1.subcategory2.options[2]=new Option("vsfsfv", "vfsv");
+break;
+}
+return true;
+}
+</script>
+</head>
+<body>
+<form id="form1" name="form1" onsubmit="return validateForm(); true">
+
+<tr><td>Country</td><div>
+<select name="category" id="category" onchange="javascript: modify(this.options[this.selectedIndex].value);">
+<option value="">Select Category</option>
+<option value="India">India</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Usa">USA</option>
+<option value="Australia">Australia</option>
+</select>
+</div></tr>
+
+<tr><td>States</td><div>
+<script type="text/javascript">
+document.write('<select name="subcategory1" onchange="javascript: modify1(this.options[this.selectedIndex].value);"><option value="">select subcategory 1</option></select>')
+</script></div></tr>
+
+<tr><td>City</td><div>
+<script type="text/javascript">
+document.write('<select name="subcategory2"><option value="">select subcategory 2</option></select>')
+</script></div></tr>
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<title>fsort</title>
+<script type="text/javascript">
+
+function arraySort() { 
+var aray = new Array();
+ for (var i = 0; i < 9; i++) {
+ 	
+ 	var sort_val=document.getElementById('array_sort'+i).value;
+ 	aray[i]=sort_val;
+ }
+ alert(aray.sort());
+}
+</script>
+<body>
+<form id="imageform">
+Value1 <input type="text" id="array_sort0" name="array_sort0" value=""> <br>
+Value2 <input type="text" id="array_sort1" name="array_sort1" value=""> <br>
+Value3 <input type="text" id="array_sort2" name="array_sort2" value=""> <br>
+Value4 <input type="text" id="array_sort3" name="array_sort3" value=""> <br>
+Value5 <input type="text" id="array_sort4" name="array_sort4" value=""> <br>
+Value6 <input type="text" id="array_sort5" name="array_sort5" value=""> <br>
+Value7 <input type="text" id="array_sort6" name="array_sort6" value=""> <br>
+Value8 <input type="text" id="array_sort7" name="array_sort7" value=""> <br>
+Value9 <input type="text" id="array_sort8" name="array_sort8" value=""> <br>
+<button type="button" name="sort" id="sort" onclick="return arraySort();">Sort</button>
+</form>
+</body>
+</html>

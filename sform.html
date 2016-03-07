@@ -1,0 +1,50 @@
+<!doctype html>
+<html> 
+<title>sform</title>
+<head>
+<h1 style="text-align:center"> STUDENT FORM </h1>
+<script type="text/javascript">
+function abc(){
+var name=document.getElementById('name').value;
+if(name==""){
+	alert("please enter name");
+}
+var age=document.getElementById("age").value;
+if(age==""){
+	alert("please enter age");
+	}
+var genderM=document.getElementById("male");
+var genderF=document.getElementById("female");
+
+if (genderM.checked==false && genderF.checked==false){
+	alert("please select gender");}
+
+var Address=document.getElementById("address").value;
+if(address==""){
+	alert("enter address");
+}
+}
+</script></head>
+<body>
+<table>
+<tr><td>Name:<input type="text" id="name" value=""></td></tr>
+<tr><td>Age: <input type="number" id="age" value=""></td></tr>
+<tr><td>Gender: <input type="radio" name="gender" id="male" value="male"> male </td>
+<td><input type="radio" name="gender" id="female" value="female">female
+</td></tr>
+<tr><td>Address:<textarea rows="4" id="address" value=""> </textarea></td></tr>
+<tr><td>Education:<input type="checkbox" name="education" value="highschool"> HIGHSCHOOL
+<input type="checkbox" name="education" value="DIPLOMA"> DIPLOMA <br>
+<input type="checkbox" name="education" value="DERGEE"> DERGEE<br>
+<input type="checkbox" name="education" value="POST GRAD"> POST GRAD <br>
+<input type="checkbox" name="education" value="PHD"> PHD </td></tr><br>
+<tr><td>CITY:<select> <option value="visakhapatnam">visakhapatnam</option>
+ <option value="hyderabad">hyderabad</option>
+ <option value="guntur">guntur</option></td></tr>
+  </select>
+  <tr><td><button type="button">Clear</button> </td>
+  <td><button type="button" onclick="abc()">submit</button></td>
+ </tr>
+ </table>
+</body>
+</html>
