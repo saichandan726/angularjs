@@ -3,6 +3,18 @@
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+  
+
+              $(document).on('click','.delete', function () { 
+     alert("are you sure delete the row");
+     $(this).closest('tr').remove();
+     return false;
+ });
+  
+</script>
+
+
 </head>
 <body>
 <div class="content">
@@ -48,7 +60,7 @@
  <td><button type=button class="edit"><span class="glyphicon glyphicon-pencil"></span></button>
  <button type="button" class="delete"> <span class="glyphicon glyphicon-trash"></span></button> </td>
  </tr>
-  
+
     </tbody>
   </table>
 </div>

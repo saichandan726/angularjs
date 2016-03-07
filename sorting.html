@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Sort</title>
+  <script>
+
+	function numericalorder(a, b){ return a - b; }
+ 
+	function sort() {
+	  TextBoxes = 10;
+	  a = new Array();
+
+ 	for(i = 1; i <= TextBoxes; i++){
+		x = 'n' + i;
+		a[i-1] = document.getElementById(x).value;
+	  }
+	  
+ 
+	  a.sort(numericalorder);
+ 
+ 
+	  for(i = 1; i <= TextBoxes; i++){
+		x = 'n' + i;
+		document.getElementById(x).value = a[i-1];
+	  }
+	}
+  </script> 
+ </head>
+ <body>
+  <form name ='n'>
+   <input id="n1" value="" /> <br />
+   <input id="n2" value="" /> <br />
+   <input id="n3" value="" /> <br />
+   <input id="n4" value="" /> <br />
+   <input id="n5" value="" /> <br />
+   <input id="n6" value="" /> <br />
+   <input id="n7" value="" /> <br />
+   <input id="n8" value="" /> <br />
+   <input id="n9" value="" /> <br />
+   <input id="n10" value="" /> <br />
+   <br />
+   <input type="button" value="sort" onclick="sort()" />
+  </form>
+
+ </body>
+</html>
